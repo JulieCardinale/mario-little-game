@@ -1,0 +1,25 @@
+/* * * * *
+* IMPORTS *
+*/ 
+@import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Source+Code+Pro&display=swap');
+
+/* * * * 
+* VARS *
+*/ 
+$background-image: "/assets/images/main-background.jpeg";
+$icon-start: "/assets/images/icon-start.png";
+$icon-end: "/assets/images/icon-end.png";
+$win-image: "/assets/images/win-image.gif";
+$loose-image: "/assets/images/loose-image.jpg";
+$first-color: #FFFFFF;
+$second-color: #A54411;
+$third-color: #E5E5E5;
+$main-font: 'Source Code Pro', monospace;
+$second-font: 'Press Start 2P', cursive;
+$gutter: 1rem;
+$project-breakpoint-medium: 700px;
+$project-breakpoint-small: 580px;
+$medium: "screen and (max-width: #{$project-breakpoint-medium})";
+$small: "screen and (max-width: #{$project-breakpoint-small})";
+

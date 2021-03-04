@@ -1,0 +1,211 @@
+/* * * * *
+* IMPORTS *
+*/ 
+@import './reset';
+@import './vars';
+@import './mixins';
+
+/* * * * *
+* BODY *
+*/ 
+body {
+
+    @extend %flex;
+    @include size(100%);
+    @include backgroundImage($background-image, $repeat: repeat-y);
+
+    flex-direction: column;
+    min-height: 100vh;
+    font-family: $main-font;
+    padding: 5rem 0;
+    
+}
+
+/* * * * * * * * *
+* MARIO CONTAINER *
+*/ 
+.mario {
+
+  @include size(600px);
+
+  margin: auto;
+
+  @media #{$medium} { width: 480px }
+  @media #{$small} { width: 240px }
+
+
+
+  /* * * * *
+  * TITLE *
+  */ 
+  &__title {
+
+    @include size(100%);
+
+    font-family: $second-font;
+    font-weight: bold;
+    font-size: 3rem;
+    margin-bottom: $gutter * 2;
+    text-align: center;
+    line-height: $gutter * 3;
+
+    @media #{$medium} { font-size: 2rem }
+    @media #{$small} { font-size: 1.3rem }
+
+  }
+
+  /* * * * * * * *
+  * USER NOTICE *
+  */ 
+  &__notice {
+
+    @extend %flex;
+    @include size(auto);
+    @extend %border;
+
+    font-size: 1rem;
+    background-color: $third-color;
+    margin-bottom: $gutter;
+    line-height: 1.3rem;
+    padding: $gutter * 1.5;
+
+    @media #{$small} { font-size: 0.8rem; }
+
+  }
+
+  /* * * * * * *
+  * USER INPUT *
+  */ 
+  &__user-code {
+
+    @include size(100%, inherit);
+
+    padding: 1rem;
+    font-family: $main-font;
+    background-color: black;
+    color: $first-color;
+    font-size: 1.4rem;
+    height: 10rem;
+    margin-bottom: $gutter;
+    resize: none;
+
+    @media #{$small} { font-size: 1rem; }
+
+  }
+
+  /* * * * *
+  * BUTTONS *
+  */ 
+  &__buttons {
+    
+    @extend %flex;
+
+    justify-content: space-between;
+    margin-bottom: $gutter;
+
+  }
+
+  /* * * * *
+  * BUTTON *
+  */ 
+  &__button {
+  
+    @extend %flex;
+    @include size(100px, 50px);
+
+    font-family: $main-font;
+    text-align: center;
+    font-size: 1rem;
+
+    @media #{$small} { width: 50px; height: 25px; font-size: 0.8rem; }
+  }
+
+  /* * * * * *
+  * THE BOARD *
+  */ 
+  &__board {
+
+    @include size(100%, inherit);
+    
+  }
+
+  /* * * * * * * * 
+  * SUCCESS IMAGE *
+  */ 
+  &__success {
+
+    @include backgroundImage($win-image);
+    @include size(100%, 300px);
+
+    display: none;
+
+  }
+
+  /* * * * * * *
+  * FAIL IMAGE *
+  */ 
+  &__fail {
+
+    @include backgroundImage($loose-image);
+    @include size(100%, 300px);
+
+    display: none;
+
+  }
+
+}
+
+
+/* * * *
+* CELLS *
+*/ 
+.cellRow {
+
+  @extend %flex;
+  @include size(100%, inherit);
+
+  margin: auto;
+
+}
+
+.cell {
+
+  @include size(100px, 100px);
+  @extend %border;
+
+  background-color: $second-color;
+
+  @media #{$medium} { width: 80px; height: 80px; }
+  @media #{$small} { width: 40px; height: 40px; }
+
+}
+
+.cellCurrent {
+  @include backgroundImage($icon-start);
+}
+
+.cellEnd {
+  @include backgroundImage($icon-end, $size: 70%);
+}
+
+.cellCurrent-top {
+  @include rotate(-90deg);
+}
+
+.cellCurrent-bottom {
+  @include rotate(90deg);
+}
+
+.cellCurrent-left {
+  @include rotate(180deg);
+  transform: scaleX(-1);
+}
+
+.cellCurrent-right {
+  @include rotate(0);
+}
+
+
+
+
+

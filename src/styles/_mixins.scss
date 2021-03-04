@@ -1,0 +1,40 @@
+/* * * *
+* SIZE *
+*/ 
+@mixin size ($w, $h: inerit) {
+  width: $w;
+  height: $h;
+}
+
+/* * * *
+* BG IMG *
+*/ 
+@mixin backgroundImage ($url, $position: center, $size: cover, $repeat: no-repeat) {
+  background-image: url($url);
+  background-position: $position;
+  background-size: $size;
+  background-repeat: $repeat;
+}
+
+/* * * * *
+* ROTATE *
+*/ 
+@mixin rotate ($value) {
+  transform: rotate($value);
+}
+
+/* * * * * * * * *
+* GENERATE BORDER *
+*/ 
+%border {
+  border: 1px solid black;
+}
+
+/* * * * * * * * 
+* GENERATE FLEX *
+*/ 
+%flex {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}

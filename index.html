@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Mario little game">
+    <link rel="icon" href="assets/favicon.ico" />
+    <link rel="stylesheet" href="src/styles/styles.scss">
+    <title>Jcdle - Mario little game</title>
+</head>
+<body>
+
+    <!-- CONTAINER -->
+    <section class="mario">
+
+         <!-- TITLE -->
+        <h1 class="mario__title">Mario Game</h1>
+
+         <!-- USER NOTICE -->
+        <div class="mario__notice">
+            Hey you ! Help Mario to catch the mushroom ! <br> You can use "turn left", "turn right" or "move forward", <br> but just one command per line.
+        </div>
+
+        <!-- USER INPUT -->
+        <textarea id="userCode" class="mario__user-code" placeholder="Enter your code">
+        </textarea>
+
+        <!-- BUTTONS -->
+        <div class="mario__buttons">
+            <button id="startButton" class="mario__button" type="button">Start</button>
+            <button id="resetButton" class="mario__button" type="button">Reset</button>
+        </div>
+
+        <!-- IMAGE WIN -->
+        <div id="success" class="mario__success"></div>
+
+        <!-- IMAGE FAIL -->
+        <div id="fail" class="mario__fail"></div>
+
+         <!-- THE BOARD -->
+        <div id="board" class="mario__board">
+
+    </section>
+
+    <script src="src/js/mario.js"></script>
+</body>
+</html>
